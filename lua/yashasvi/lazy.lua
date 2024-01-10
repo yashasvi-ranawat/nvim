@@ -17,7 +17,7 @@ local plugins = {
 -- or                              , branch = '0.1.x',
       dependencies = { 'nvim-lua/plenary.nvim' }
     },
-    'shaunsingh/solarized.nvim',
+    'lifepillar/vim-solarized8',
     {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
     'mbbill/undotree',
     'tpope/vim-fugitive',
