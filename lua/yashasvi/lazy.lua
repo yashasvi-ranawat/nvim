@@ -31,7 +31,10 @@ local plugins = {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'nvim-tree/nvim-web-devicons' }
     },
-    'jlanzarotta/bufexplorer',
+    {
+    'ThePrimeagen/harpoon',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+    }
 }
 
 local opts = {
