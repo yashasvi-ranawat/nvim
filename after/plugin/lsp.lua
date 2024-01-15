@@ -18,6 +18,8 @@ require('lspconfig').pylsp.setup({
 local lua_opts = lsp.nvim_lua_ls()
 require('lspconfig').lua_ls.setup(lua_opts)
 
+require('lspconfig').pyright.setup({})
+
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
