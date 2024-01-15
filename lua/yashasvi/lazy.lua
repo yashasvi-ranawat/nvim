@@ -21,11 +21,26 @@ local plugins = {
     {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
     'mbbill/undotree',
     'tpope/vim-fugitive',
-    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-    {'neovim/nvim-lspconfig'},
-    {'hrsh7th/cmp-nvim-lsp'},
-    {'hrsh7th/nvim-cmp'},
-    {'L3MON4D3/LuaSnip'},
+    {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x',
+      dependencies = {
+		  -- LSP Support
+		  {'neovim/nvim-lspconfig'},
+		  {'williamboman/mason.nvim'},
+		  {'williamboman/mason-lspconfig.nvim'},
+
+		  -- Autocompletion
+		  {'hrsh7th/nvim-cmp'},
+		  {'hrsh7th/cmp-buffer'},
+		  {'hrsh7th/cmp-path'},
+		  {'saadparwaiz1/cmp_luasnip'},
+		  {'hrsh7th/cmp-nvim-lsp'},
+		  {'hrsh7th/cmp-nvim-lua'},
+
+		  -- Snippets
+		  {'L3MON4D3/LuaSnip'},
+		  {'rafamadriz/friendly-snippets'},
+	  }
+    },
     'eandrju/cellular-automaton.nvim',
     {
     'nvim-lualine/lualine.nvim',
@@ -45,7 +60,6 @@ local plugins = {
             --     -- refer to the configuration section below
              },
     },
-    'ggandor/leap.nvim',
 }
 
 local opts = {
