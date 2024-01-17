@@ -60,6 +60,7 @@ local plugins = {
             --     -- refer to the configuration section below
              },
     },
+    'ojroques/nvim-osc52',  -- osc52 copy for ssh, remove after nvim 0.10.0
 }
 
 local opts = {
