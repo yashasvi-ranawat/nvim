@@ -51,15 +51,6 @@ local plugins = {
     dependencies = { 'nvim-lua/plenary.nvim' }
     },
     'nvim-treesitter/nvim-treesitter-context',
-    {
-    "folke/trouble.nvim",
-     dependencies = { "nvim-tree/nvim-web-devicons" },
-      opts = {
-            -- your configuration comes here
-            --   -- or leave it empty to use the default settings
-            --     -- refer to the configuration section below
-             },
-    },
     'ojroques/nvim-osc52',  -- osc52 copy for ssh, remove after nvim 0.10.0
 }
 
