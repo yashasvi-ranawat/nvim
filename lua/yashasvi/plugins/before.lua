@@ -8,6 +8,6 @@ return {
     vim.keymap.set('n', '<C-b>', before.jump_to_last_edit, {})
 
     -- Jump to next entry in the edit history
-    vim.keymap.set('n', '<C-n>', before.jump_to_next_edit, {})
+    -- vim.keymap.set('n', '<C-n>', before.jump_to_next_edit, {})
   end
 }
