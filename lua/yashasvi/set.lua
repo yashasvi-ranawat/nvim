@@ -20,8 +20,10 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
+-- solarized8
 vim.opt.termguicolors = true
-vim.opt.background = "light" -- solarized8
+vim.opt.background = "light"
+os.execute('sh ../../scripts/solarized8.sh')
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
