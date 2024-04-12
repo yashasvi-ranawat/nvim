@@ -43,3 +43,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- run black
 vim.keymap.set("n", "<leader>b", "<cmd>!black %<CR>", { silent = true })
+
+-- restart LSP
+vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<CR>", { silent = true })
