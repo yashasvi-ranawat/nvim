@@ -25,23 +25,34 @@ return {
 
         lsp.preset("recommended")
 
-        require('lspconfig').pylsp.setup({
-            settings = {
-                pylsp = {
-                    plugins = {
-                        pycodestyle = {
-                            ignore = {},
-                            maxLineLength = 89
+        -- mason install
+        require('mason').setup({})
+        require('mason-lspconfig').setup({
+            ensure_installed = {'lua_ls', 'pylsp', 'pyright', 'rust_analyzer'},
+            handlers = {
+                function(server_name)
+                    require('lspconfig')[server_name].setup({})
+                end,
+                pylsp = function()
+                    require('lspconfig').pylsp.setup({
+                        settings = {
+                            pylsp = {
+                                plugins = {
+                                    pycodestyle = {
+                                        ignore = {},
+                                        maxLineLength = 89,
+                                    }
+                                }
+                            }
                         }
-                    }
-                }
-            }
+                    })
+                end,
+                lua_ls = function()
+                    local lua_opts = lsp.nvim_lua_ls()
+                    require('lspconfig').lua_ls.setup(lua_opts)
+                end,
+            },
         })
-
-        local lua_opts = lsp.nvim_lua_ls()
-        require('lspconfig').lua_ls.setup(lua_opts)
-
-        require('lspconfig').pyright.setup({})
 
         local cmp = require('cmp')
         local cmp_select = {behavior = cmp.SelectBehavior.Select}
