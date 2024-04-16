@@ -11,9 +11,11 @@
   pip install "python-lsp-server[all]"
   ```
 
-- [pylsp-mypy](https://github.com/python-lsp/pylsp-mypy)
-  ```vim
-  :PylspInstall pylsp-mypy
+- [pyright](https://github.com/microsoft/pyright)
+  (Should be autoinstalled with mason build)
+
+  ```bash
+  pip install pyright
   ```
 
 - [python-lsp-black](https://github.com/python-lsp/python-lsp-black)
