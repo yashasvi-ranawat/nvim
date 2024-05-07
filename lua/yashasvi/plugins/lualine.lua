@@ -11,7 +11,12 @@ return {
                 theme = 'solarized'
                 -- ... your lualine config
             },
-            sections = {lualine_c = {{"filename", path=1 }}}
+            sections = {
+                lualine_b = {},
+                lualine_c = { 'branch', 'diff', 'diagnostics' },
+                lualine_x = { { "filename", path = 1 } },
+                lualine_y = {},
+            }
         })
     end
 }
