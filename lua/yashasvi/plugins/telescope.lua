@@ -26,5 +26,8 @@ return {
 
         -- treesitter
         vim.keymap.set("n", "<leader>pt", builtin.treesitter, {})
+
+        -- git pickers
+        vim.keymap.set('n', '<leader>pc', builtin.git_branches, {})
     end
 }
