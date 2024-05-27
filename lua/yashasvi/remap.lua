@@ -43,3 +43,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- restart LSP
 vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<CR>", { silent = true })
+
+-- refresh buffer
+vim.keymap.set("n", "<leader>e", "<cmd>edit<CR>", { silent = true })
