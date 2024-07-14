@@ -14,10 +14,9 @@ return {
         vim.keymap.set('n', '<leader>ps', function()
             builtin.grep_string({ search = vim.fn.input("Grep > ") })
         end)
-        
+
         -- vim pickers
         vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
-        vim.keymap.set('n', '<leader>pb', builtin.buffers, {})
 
         -- lsp pickers
         vim.keymap.set("n", "<leader>pd", builtin.lsp_definitions, {})
@@ -28,6 +27,6 @@ return {
         vim.keymap.set("n", "<leader>pt", builtin.treesitter, {})
 
         -- git pickers
-        vim.keymap.set('n', '<leader>pc', builtin.git_branches, {})
+        vim.keymap.set('n', '<leader>pb', builtin.git_branches, {})
     end
 }
