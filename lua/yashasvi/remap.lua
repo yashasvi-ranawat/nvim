@@ -46,3 +46,6 @@ vim.keymap.set("n", "<leader>lr", "<cmd>LspRestart<CR>", { silent = true })
 
 -- refresh buffer
 vim.keymap.set("n", "<leader>e", "<cmd>edit<CR>", { silent = true })
+
+-- no ESC key
+vim.keymap.set("i", "<C-c>", "<Esc>")
