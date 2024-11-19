@@ -3,21 +3,21 @@ return {
     branch = 'v3.x',
     dependencies = {
         -- LSP Support
-        {'neovim/nvim-lspconfig'},
-        {'williamboman/mason.nvim'},
-        {'williamboman/mason-lspconfig.nvim'},
+        { 'neovim/nvim-lspconfig' },
+        { 'williamboman/mason.nvim' },
+        { 'williamboman/mason-lspconfig.nvim' },
 
         -- Autocompletion
-        {'hrsh7th/nvim-cmp'},
-        {'hrsh7th/cmp-buffer'},
-        {'hrsh7th/cmp-path'},
-        {'saadparwaiz1/cmp_luasnip'},
-        {'hrsh7th/cmp-nvim-lsp'},
-        {'hrsh7th/cmp-nvim-lua'},
+        { 'hrsh7th/nvim-cmp' },
+        { 'hrsh7th/cmp-buffer' },
+        { 'hrsh7th/cmp-path' },
+        { 'saadparwaiz1/cmp_luasnip' },
+        { 'hrsh7th/cmp-nvim-lsp' },
+        { 'hrsh7th/cmp-nvim-lua' },
 
         -- Snippets
-        {'L3MON4D3/LuaSnip'},
-        {'rafamadriz/friendly-snippets'},
+        { 'L3MON4D3/LuaSnip' },
+        { 'rafamadriz/friendly-snippets' },
     },
 
     config = function()
@@ -25,10 +25,8 @@ return {
 
         lsp.preset("recommended")
 
-        -- mason install
-        require('mason').setup({})
         require('mason-lspconfig').setup({
-            ensure_installed = {'lua_ls', 'pylsp', 'pyright', 'rust_analyzer'},
+            ensure_installed = { 'lua_ls', 'pylsp', 'pyright', 'rust_analyzer' },
             handlers = {
                 function(server_name)
                     require('lspconfig')[server_name].setup({})
@@ -55,7 +53,7 @@ return {
                     local lua_opts = lsp.nvim_lua_ls()
                     require('lspconfig').lua_ls.setup(lua_opts)
                 end,
-                rust_analyzer = function ()
+                rust_analyzer = function()
                     require('lspconfig').rust_analyzer.setup({
                         settings = {
                             ['rust-analyzer'] = {
@@ -70,7 +68,7 @@ return {
         })
 
         local cmp = require('cmp')
-        local cmp_select = {behavior = cmp.SelectBehavior.Select}
+        local cmp_select = { behavior = cmp.SelectBehavior.Select }
         local cmp_mappings = lsp.defaults.cmp_mappings({
             ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
             ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
@@ -96,7 +94,7 @@ return {
         })
 
         lsp.on_attach(function(client, bufnr)
-            local opts = {buffer = bufnr, remap = false}
+            local opts = { buffer = bufnr, remap = false }
 
             -- vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
             vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)

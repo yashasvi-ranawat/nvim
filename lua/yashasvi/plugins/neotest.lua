@@ -15,7 +15,7 @@ return {
             },
         })
 
-        vim.keymap.set("n", "<leader>t", function() require("neotest").run.run() end)
+        vim.keymap.set("n", "<leader>t", function() require("neotest").run.run({strategy = "dap"}) end)
         vim.keymap.set("n", "<leader>ta", function() require("neotest").run.attach() end)
         vim.keymap.set("n", "<leader>to", function() require("neotest").output.open({ enter = true }) end)
         vim.keymap.set("n", "<leader>tt", function()
