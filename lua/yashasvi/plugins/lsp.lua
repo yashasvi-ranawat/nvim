@@ -40,9 +40,10 @@ return {
                                         ignore = {},
                                         maxLineLength = 89,
                                     },
-                                    black = {
+                                    ruff = {
                                         enabled = true,
-                                        line_length = 89,
+                                        format = { "I" },
+                                        lineLength = 89,
                                     },
                                 }
                             }

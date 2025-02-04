@@ -4,9 +4,9 @@
 
 ### Python
 
-- [python-lsp-black](https://github.com/python-lsp/python-lsp-black)
+- [python-lsp-ruff](https://github.com/python-lsp/python-lsp-ruff)
   ```vim
-  :PylspInstall python-lsp-black
+  :PylspInstall python-lsp-ruff
   ```
 
 ## Setup
