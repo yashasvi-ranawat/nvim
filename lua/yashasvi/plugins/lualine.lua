@@ -8,7 +8,7 @@ return {
         require('lualine').setup({
             options = {
                 -- ... your lualine config
-                theme = 'solarized'
+                theme = 'gruvbox'
                 -- ... your lualine config
             },
             sections = {
